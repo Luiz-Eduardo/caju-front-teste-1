@@ -23,7 +23,8 @@ jobs:
           key: ${{ runner.OS }}-node-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.OS }}-node-
-      - run: corepack enable && yarn set version 4.1.0 && yarn install
+      - run: corepack enable && yarn set version 4.1.0
+      - run: yarn install --mode update-lockfile
       - run: yarn run build
       - run: yarn run check
       - run: yarn run test
