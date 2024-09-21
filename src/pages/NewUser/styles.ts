@@ -1,14 +1,15 @@
 import styled from "styled-components";
-import { _IconButtonStyled } from "~/components/Buttons/IconButton";
-import Button from "~/components/Buttons";
 
+import Button from "~/components/Buttons";
+import { _IconButtonStyled } from "~/components/Buttons/IconButton";
+import { theme } from "~/styles";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 16px;
+  gap: ${theme.spacing.md};
 `;
 
 export const Card = styled.div`
@@ -17,14 +18,14 @@ export const Card = styled.div`
   padding: 48px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
- 
+  gap: ${theme.spacing.md};
+
   ${_IconButtonStyled} {
     margin-bottom: 8px;
     align-items: flex-start;
   }
 
-  ${Button}{
+  ${Button} {
     align-self: flex-end;
   }
 `;

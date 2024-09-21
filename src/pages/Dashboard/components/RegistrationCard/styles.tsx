@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
+import { theme } from "~/styles";
+
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4px;
   border: 4px solid #fff;
   margin: 16px;
-  border-radius: 8px;
+  border-radius: ${theme.border.radius.md};
   padding: 16px;
   background-color: #fff;
   h3,
@@ -32,4 +34,12 @@ export const Actions = styled.div`
   svg {
     cursor: pointer;
   }
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+  margin: 16px 0;
 `;

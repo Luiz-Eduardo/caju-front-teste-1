@@ -1,4 +1,3 @@
-
 # Caju Front End Teste
 
 Esse é um desafio técnico para você demonstrar suas habilidades como frontend, sua missão será dar continuidade ao desenvolvimento da plataforma de admissão que consiste em duas telas, a tela de `Dashboard` e uma tela de `Cadastro`.
@@ -20,36 +19,34 @@ A tela de `Cadastro` exibe um formulário simples que será utilizado para criar
 O desafio é aprimorar o código existente e implementar as funcionalidades que estão incompletas, use a sua experiência para identificar e propor soluções para os problemas encontrados.
 Sinta-se a vontade para refatorar, criar novas pastas, componentes, hooks, utils e o que mais achar necessário para garantir que o projeto esteja organizado e segue as boas práticas de desenvolvimento.
 
-
 ## Especificações
 
 ### Tela Dashboard
-  
-- Implementar `GET` ao carregar a pagina e ao fazer pequisa por `CPF`
-- Filtrar os cards por coluna, usando o status.
-- Implementar `PUT` ao clicar em Reprovar e alterar o status para `REPROVED`
-- Implementar `PUT` ao clicar em Aprovar e alterar o status para `APPROVED`
-- Implementar `PUT` ao clicar em Revisar novamente e alterar o status para `REVIEW`
-- Implementar `DELETE` ao clicar no lixeira no card.
-- O botão de `Reprovar` e `Aprovar` só deve aparecer em admissões com o status `REVIEW` 
-- O botão `Revisar novamente` só deve aparecer em admissões com o status `REPROVED` ou `APPROVED`
-- Implementar um loading na tela ao realizar requisições.
-- Todas as ações devem ter modal de confirmação e uma notificação de sucesso ou erro
-- Na pesquisa por CPF realizar a requisição automaticamente ao preencher um CPF válido
-- Adicionar máscara de CPF no campo de pesquisa.
-- Atualizar os dados (refetch) ao clicar no ícone de atualizar
 
+- Implementar `GET` ao carregar a pagina e ao fazer pequisa por `CPF` :white_check_mark:
+- Filtrar os cards por coluna, usando o status. :white_check_mark:
+- Implementar `PUT` ao clicar em Reprovar e alterar o status para `REPROVED` :white_check_mark:
+- Implementar `PUT` ao clicar em Aprovar e alterar o status para `APPROVED`:white_check_mark:
+- Implementar `PUT` ao clicar em Revisar novamente e alterar o status para `REVIEW` :white_check_mark:
+- Implementar `DELETE` ao clicar no lixeira no card. :white_check_mark:
+- O botão de `Reprovar` e `Aprovar` só deve aparecer em admissões com o status `REVIEW` :white_check_mark:
+- O botão `Revisar novamente` só deve aparecer em admissões com o status `REPROVED` ou `APPROVED` :white_check_mark:
+- Implementar um loading na tela ao realizar requisições. :white_check_mark:
+- Todas as ações devem ter modal de confirmação e uma notificação de sucesso ou erro :white_check_mark:
+- Na pesquisa por CPF realizar a requisição automaticamente ao preencher um CPF válido :white_check_mark:
+- Adicionar máscara de CPF no campo de pesquisa. :white_check_mark:
+- Atualizar os dados (refetch) ao clicar no ícone de atualizar :white_check_mark:
 
 ### Tela Cadastro
 
-- Implementar validação no campo de `email` para que aceite apenas emails válidos
-- Implementar validação no campo `nome completo` para que aceite pelo menos um espaço, no mínimo duas letras, e que a primeira letra não seja um número.
-- Implementar validação no campo CPF para aceitar apenas CPFs válidos e adicionar uma máscara de CPF ao campo.
-- Implementar `POST` ao preencher todos os campos corretamentes.
-- Redirecionar ao `/dashboard` ao criar uma nova admissão.
-
+- Implementar validação no campo de `email` para que aceite apenas emails válidos :white_check_mark:
+- Implementar validação no campo `nome completo` para que aceite pelo menos um espaço, no mínimo duas letras, e que a primeira letra não seja um número. :white_check_mark:
+- Implementar validação no campo CPF para aceitar apenas CPFs válidos e adicionar uma máscara de CPF ao campo. :white_check_mark:
+- Implementar `POST` ao preencher todos os campos corretamentes. :white_check_mark:
+- Redirecionar ao `/dashboard` ao criar uma nova admissão. :white_check_mark:
 
 ## API
+
 Você consumirá uma API mockada localmente, que será executada utilizando o json-server. Para mais informações consulte a [documentação](https://github.com/typicode/json-server/).
 
 Exemplo de Requisição:
@@ -70,12 +67,11 @@ Para realizar a pesquisa por CPF, utilize essa funcionalidade do json-web-server
 <br/>
 https://github.com/typicode/json-server/tree/v0?tab=readme-ov-file#filter
 
-
 ## Extras (opcional)
 
-- Testes Unitários e de Integração `(Obrigátorio para Senior e Tech Lead)`
-- End-to-End (E2E) 
-- Configuração de CI/CD com deploy automatizado
+- Testes Unitários e de Integração `(Obrigátorio para Senior e Tech Lead)` :white_check_mark:
+- End-to-End (E2E)
+- Configuração de CI/CD com deploy automatizado :white_check_mark:
 
 ## Dicas e sugestões
 
@@ -137,6 +133,4 @@ Caso necessite executar a suíte de testes use o comando abaixo:
 yarn test:dev
 ```
 
-
 Para concluir o desenvolvimento faça as edições necessárias e depois envie a URL do novo repositório com suas alterações para o RH.
-

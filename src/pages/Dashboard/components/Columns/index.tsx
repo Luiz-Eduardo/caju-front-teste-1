@@ -2,27 +2,30 @@
 import * as S from "./styles";
 import RegistrationCard from "../RegistrationCard";
 
-const allColumns = [
+import { useRegistration } from "~/hooks";
+import type { EmployeeStatus } from "~/models";
+
+const ALL_COLUMNS: Array<{ status: EmployeeStatus, title: string }> = [
   { status: 'REVIEW', title: "Pronto para revisar" },
   { status: 'APPROVED', title: "Aprovado" },
   { status: 'REPROVED', title: "Reprovado" },
 ];
 
-type Props = {
-  registrations?: any[];
-};
-const Collumns = (props: Props) => {
+const Collumns = () => {
+  const { registrations } = useRegistration();
+
   return (
     <S.Container>
-      {allColumns.map((collum) => {
+      {ALL_COLUMNS.map((column) => {
         return (
-          <S.Column status={collum.status} key={collum.title}>
+          <S.Column $status={column.status} key={column.title}>
             <>
-              <S.TitleColumn status={collum.status}>
-                {collum.title}
+              <S.TitleColumn $status={column.status}>
+                {column.title}
               </S.TitleColumn>
+
               <S.CollumContent>
-                {props?.registrations?.map((registration) => {
+                {registrations?.filter((registration) => registration.status === column.status).map((registration) => {
                   return (
                     <RegistrationCard
                       data={registration}

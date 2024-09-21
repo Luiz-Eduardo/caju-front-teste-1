@@ -1,13 +1,20 @@
-import Router from "~/router";
 import { Header } from "./components/Header";
+import { RegistrationProvider, ToastProvider } from "./hooks";
+
+import Router from "~/router";
 
 function App() {
   return (
     <>
       <Header>
-        <h1>Caju Front Teste</h1>
+        <h1>Caju Frontend - Teste Luiz Eduardo</h1>
       </Header>
-      <Router />
+
+      <ToastProvider>
+        <RegistrationProvider>
+          <Router />
+        </RegistrationProvider>
+      </ToastProvider>
     </>
   );
 }
