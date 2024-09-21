@@ -19,14 +19,12 @@ jobs:
       - name: Cache node modules
         uses: actions/cache@v3
         with:
-          path: |
-            node_modules
-            .yarn
+          path: node_modules
           key: ${{ runner.OS }}-node-${{ hashFiles('yarn.lock') }}
           restore-keys: |
             ${{ runner.OS }}-node-
       - run: corepack enable && yarn set version 4.1.0
-      - run: yarn install --mode update-lockfile
+      - run: yarn install --immutable
       - run: yarn run build
       - run: yarn run check
       - run: yarn run test
